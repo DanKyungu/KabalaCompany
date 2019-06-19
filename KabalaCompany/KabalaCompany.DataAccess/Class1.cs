@@ -1,5 +1,5 @@
-﻿using KabalaCompany.DataEntity;
-using System;
+﻿using System;
+using KabalaCompany.DataEntity;
 
 namespace KabalaCompany.DataAccess
 {
@@ -8,7 +8,8 @@ namespace KabalaCompany.DataAccess
         public void Test()
         {
             KabalaCompanyDbContext dbContext = new KabalaCompanyDbContext();
-
         }
+
+
     }
 }

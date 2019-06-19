@@ -6,7 +6,7 @@ using System.Text;
 
 namespace KabalaCompany.DataEntity
 {
-    [Table(nameof(Employee), Schema ="HR")]
+    [Table(nameof(Employee),Schema = "HR")]
     public class Employee
     {
         [Key]
@@ -21,7 +21,7 @@ namespace KabalaCompany.DataEntity
         public string LastName { get; set; }
 
         [MaxLength(50)]
-        public string Preferedname { get; set; }
+        public string PreferedName { get; set; }
 
         [Required]
         public DateTime DateOfBirth { get; set; }
@@ -31,10 +31,9 @@ namespace KabalaCompany.DataEntity
         public string Email { get; set; }
 
         [Required]
-        public DateTime HireDate { get; set; }
-        
+        public DateTime HiredDate { get; set; }
+
         [Required]
         public DateTime TerminationDate { get; set; } = new DateTime(9999, 12, 30);
-
     }
 }
