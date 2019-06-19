@@ -16,5 +16,10 @@ namespace KabalaCompany.DataEntity
 
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("DefaultConnection");
+        }
+
     }
 }
