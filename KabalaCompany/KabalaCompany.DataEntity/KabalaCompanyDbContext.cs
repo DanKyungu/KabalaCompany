@@ -10,5 +10,6 @@ namespace KabalaCompany.DataEntity
 
         }
 
+
     }
 }
