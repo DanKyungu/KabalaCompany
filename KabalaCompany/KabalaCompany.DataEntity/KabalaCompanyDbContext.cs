@@ -10,6 +10,11 @@ namespace KabalaCompany.DataEntity
 
         }
 
+        public KabalaCompanyDbContext(DbContextOptions<KabalaCompanyDbContext> options)
+            :base(options)
+        {
+
+        }
 
     }
 }
