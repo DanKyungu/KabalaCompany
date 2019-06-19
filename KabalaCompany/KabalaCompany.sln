@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.28711.60
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.Desktop", "KabalaCompany.Desktop\KabalaCompany.Desktop.csproj", "{2F9480A2-EC5A-41B7-B03B-20AE32CE47EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.DataEntity", "KabalaCompany.DataEntity\KabalaCompany.DataEntity.csproj", "{F5ABB155-E860-4B55-9B27-9F39A2ABC758}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabalaCompany.DataAccess", "KabalaCompany.DataAccess\KabalaCompany.DataAccess.csproj", "{1F1DE969-9692-4ABC-9089-1AC621F71A89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.DataAccess", "KabalaCompany.DataAccess\KabalaCompany.DataAccess.csproj", "{1F1DE969-9692-4ABC-9089-1AC621F71A89}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.DataEntity", "KabalaCompany.DataEntity\KabalaCompany.DataEntity.csproj", "{590BF2D3-CFED-4540-96E9-DDEC44093F05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{2F9480A2-EC5A-41B7-B03B-20AE32CE47EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F9480A2-EC5A-41B7-B03B-20AE32CE47EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F9480A2-EC5A-41B7-B03B-20AE32CE47EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5ABB155-E860-4B55-9B27-9F39A2ABC758}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5ABB155-E860-4B55-9B27-9F39A2ABC758}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5ABB155-E860-4B55-9B27-9F39A2ABC758}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5ABB155-E860-4B55-9B27-9F39A2ABC758}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
