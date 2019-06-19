@@ -35,5 +35,10 @@ namespace KabalaCompany.DataEntity
 
         [Required]
         public DateTime TerminationDate { get; set; } = new DateTime(9999, 12, 30);
+
+        public int UserId { get; set; }
+        public User User { get; set; }
+       
+
     }
 }
