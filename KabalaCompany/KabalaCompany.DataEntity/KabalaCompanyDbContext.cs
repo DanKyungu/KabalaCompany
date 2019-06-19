@@ -7,17 +7,19 @@ namespace KabalaCompany.DataEntity
     {
         public KabalaCompanyDbContext()
         {
-            
+
         }
 
         public KabalaCompanyDbContext(DbContextOptions<KabalaCompanyDbContext> options)
-            :base(options)
+            : base(options)
         {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("DefaultConectionString");
+            optionsBuilder.UseSqlServer("Server=THEPC\\SQLSERVER;Database=KabalaCompanyDb;Trusted_Connection=True;");
         }
+
+        public virtual DbSet<Employee> Employee{get; set;}
     }
 }
