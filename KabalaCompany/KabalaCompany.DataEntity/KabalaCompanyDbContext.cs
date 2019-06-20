@@ -1,13 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 
 namespace KabalaCompany.DataEntity
 {
     public class KabalaCompanyDbContext : DbContext
     {
-        public KabalaCompanyDbContext()
+        public IConfiguration Configuration { get; set; }
+
+        public KabalaCompanyDbContext(IConfiguration configuration)
         {
-            
+            Configuration = configuration;
         }
 
         public KabalaCompanyDbContext(DbContextOptions<KabalaCompanyDbContext> options)
@@ -17,7 +20,7 @@ namespace KabalaCompany.DataEntity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-LR9GDC4\\DSSQLEXPRESS;Database=KabalaCompanyDb;Integrated Security=True");
+            optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
         }
 
         public virtual DbSet<Employee> Employee { get; set; }
