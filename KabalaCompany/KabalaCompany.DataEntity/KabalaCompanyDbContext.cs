@@ -1,29 +1,26 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using System;
 
 namespace KabalaCompany.DataEntity
 {
     public class KabalaCompanyDbContext : DbContext
     {
-        public IConfiguration Configuration { get; set; }
-
-        public KabalaCompanyDbContext(IConfiguration configuration)
+        public KabalaCompanyDbContext()
         {
-            Configuration = configuration;
+
         }
 
         public KabalaCompanyDbContext(DbContextOptions<KabalaCompanyDbContext> options)
-            :base(options)
+            : base(options)
         {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseSqlServer("Server=THEPC\\SQLSERVER;Database=KabalaCompanyDb;Trusted_Connection=True;");
         }
 
-        public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<Employee> Employee{get; set;}
         public virtual DbSet<User> User { get; set; }
     }
 }

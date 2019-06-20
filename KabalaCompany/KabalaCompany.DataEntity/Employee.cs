@@ -16,7 +16,7 @@ namespace KabalaCompany.DataEntity
         [Required]
         public string FirstName { get; set; }
 
-        [MaxLength(50)] 
+        [MaxLength(50)]
         [Required]
         public string LastName { get; set; }
 
@@ -38,5 +38,7 @@ namespace KabalaCompany.DataEntity
 
         public int UserId { get; set; }
         public User User { get; set; }
+       
+
     }
 }

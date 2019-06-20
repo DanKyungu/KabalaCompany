@@ -1,12 +1,15 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace KabalaCompany.DataEntity
 {
-    [Table(nameof(User),Schema = "Application")]
+    [Table(nameof(User), Schema = "Application")]
     public class User
     {
         [Key]
@@ -21,5 +24,6 @@ namespace KabalaCompany.DataEntity
         public string Password { get; set; }
 
         public virtual IEnumerable<Employee> Employees { get; set; }
+
     }
 }
