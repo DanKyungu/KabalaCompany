@@ -7,9 +7,6 @@ namespace KabalaCompany.DataAccess
     {
         public void Test()
         {
-            KabalaCompanyDbContext dbContext = new KabalaCompanyDbContext();
         }
-
-
     }
 }

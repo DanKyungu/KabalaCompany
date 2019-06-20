@@ -17,7 +17,10 @@ namespace KabalaCompany.DataEntity
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("DefaultConectionString");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-LR9GDC4\\DSSQLEXPRESS;Database=KabalaCompanyDb;Integrated Security=True");
         }
+
+        public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<User> User { get; set; }
     }
 }
