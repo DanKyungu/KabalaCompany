@@ -24,6 +24,19 @@ namespace KabalaCompany.DataEntity
         public string Password { get; set; }
 
         public virtual IEnumerable<Employee> Employees { get; set; }
+        public virtual IEnumerable<AnimalStock> AnimalStocks { get; set; }
+        public virtual IEnumerable<OrderLines> OrderLines { get; set; }
+        public virtual IEnumerable<Orders> Orders { get; set; }
 
+        [InverseProperty("User")]
+        public virtual IEnumerable<PurchaseOrders> UserPurchaseOrders { get; set; }
+
+        [InverseProperty("LastEditedBy")]
+        public virtual IEnumerable<PurchaseOrders> EditedPurchaseOrders { get; set; }
+
+        [InverseProperty("LastEditedBy")]
+        public virtual IEnumerable<PurchaseOrderLines> CreatedPurchaseOrderLines { get; set; }
+
+        public virtual IEnumerable<PurchaseOrderLines> EditedPurchaseOrderLines { get; set; }
     }
 }
