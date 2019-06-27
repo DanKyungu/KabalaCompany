@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace KabalaCompany.DataEntity
@@ -23,7 +24,9 @@ namespace KabalaCompany.DataEntity
         [Required]
         public string EmailAddress { get; set; }
 
-        public virtual IEnumerable<Supplier> Suppliers { get; set; }
+        public virtual IEnumerable<Supplier> PrimarySuppliers { get; set; }
+
+        public virtual IEnumerable<Supplier> AlternativeSuppliers { get; set; }
 
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace KabalaCompany.DataEntity
@@ -33,7 +34,6 @@ namespace KabalaCompany.DataEntity
         public SupplierContactPerson AlternativeContactPerson { get; set; }
 
         public IEnumerable<PurchaseOrders> PurchaseOrders { get; set; }
-
         public IEnumerable<AnimalSupplier> AnimalSuppliers { get; set; }
     }
 }

@@ -27,7 +27,6 @@ namespace KabalaCompany.DataEntity
         public DateTime LastEditedWhen { get; set; }
 
         public int LastEditedById { get; set; }
-        [NotMapped]
         public User LastEditedBy { get; set; }
 
         public int SalesPersonId { get; set; }
