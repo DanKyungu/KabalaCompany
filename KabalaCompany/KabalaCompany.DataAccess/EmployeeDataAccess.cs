@@ -2,59 +2,57 @@
 using System.Linq;
 using KabalaCompany.DataEnties;
 using KabalaCompany.DataEntities;
+using System.Reflection;
 
 namespace KabalaCompany.DataAccess
 {
-    public class EmployeeDataAccess
+    public class EmployeeDataAccess : BaseDataAccess, IDataAccess<Employee>
     {
-        private KabalaComapany KabalaCompanyContext;
-
-        public EmployeeDataAccess()
+        public void Add(Employee entity)
         {
-            KabalaCompanyContext = new KabalaComapany();
-        }
-
-        public void Add(Employee employee)
-        {
-            using (KabalaCompanyContext)
+            using (DbContext)
             {
-                KabalaCompanyContext.Employee.Add(employee);
-                KabalaCompanyContext.SaveChanges();
+                DbContext.Employee.Add(entity);
+                DbContext.SaveChanges();
             }
         }
 
-        public void Delete(Employee employee)
+        public void Delete(Employee entity)
         {
-            using (KabalaCompanyContext)
+            using (DbContext)
             {
-                KabalaCompanyContext.Employee.Remove(employee);
-                KabalaCompanyContext.SaveChanges();
+                DbContext.Employee.Remove(entity);
+                DbContext.SaveChanges();
             }
         }
 
-        public void Update(Employee employee)
+        public Employee Update(Employee entity)
         {
-            using (KabalaCompanyContext)
+            using (DbContext)
             {
-                var currentEmployee = KabalaCompanyContext.Employee
-                    .FirstOrDefault(x => x.Id == employee.Id);
+                var currentEmployee = DbContext.Employee
+                    .FirstOrDefault(x => x.Id == entity.Id);
 
-                currentEmployee = employee;
-                KabalaCompanyContext.SaveChanges();
+                currentEmployee = entity;
+                DbContext.SaveChanges();
+
+                return currentEmployee;
             }
         }
 
         public Employee FindById(int id)
         {
-            using (KabalaCompanyContext)
+            using (DbContext)
             {
-                //var employeeEntity = (from employee in KabalaCompanyContext.Employee
+                //var employeeEntity = (from employee in DbContext.Employee
                 //                      where employee.Id == id
                 //                      select employee).FirstOrDefault();
 
-                return KabalaCompanyContext.Employee.
+                return DbContext.Employee.
                     FirstOrDefault(x => x.Id == id);
             }
         }
+
+ 
     }
 }
