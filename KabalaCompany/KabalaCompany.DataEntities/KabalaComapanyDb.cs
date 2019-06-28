@@ -60,7 +60,7 @@ namespace KabalaCompany.DataEntities
         }
 
         public virtual DbSet<Animal> Animal { get; set; }
-        public virtual DbSet<Animal> AnimalStock { get; set; }
+        public virtual DbSet<AnimalStock> AnimalStock { get; set; }
         public virtual DbSet<AnimalSupplier> AnimalSupplier { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
         public virtual DbSet<Employee> Employee { get; set; }

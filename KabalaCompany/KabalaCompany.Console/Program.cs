@@ -12,7 +12,7 @@ namespace KabalaCompany.Console
     {
         static void Main(string[] args)
         {
-            EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
+            //EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
         }
     }
 }
