@@ -1,4 +1,5 @@
 ﻿using KabalaCompany.DataEntities;
+using System.Data.Entity.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,8 +41,8 @@ namespace KabalaCompany.DataAccess
             {
                 var currentEmployee = DbContext.Set(entity.GetType())
                     .Find(id);
+                //DbContext.Entry(currentEmployee).CurrentValues.SetValues(entity);
 
-                currentEmployee = entity;
                 DbContext.SaveChanges();
 
                 return true;
