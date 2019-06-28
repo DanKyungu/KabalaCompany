@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace KabalaCompany.DataAccess
 {
-    public class UserDataAccess : BaseDataAccess<User>
+    public class SupplierContactPersonDataAccess : BaseDataAccess<SupplierContactPerson>
     {
-        
     }
 }

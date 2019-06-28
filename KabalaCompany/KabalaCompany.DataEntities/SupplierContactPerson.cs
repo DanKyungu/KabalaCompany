@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace KabalaCompany.DataEnties
+namespace KabalaCompany.DataEntities
 {
     [Table(nameof(SupplierContactPerson),Schema = "Supplier")]
     public class SupplierContactPerson

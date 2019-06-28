@@ -1,6 +1,6 @@
 namespace KabalaCompany.DataEntities
 {
-    using KabalaCompany.DataEnties;
+    using KabalaCompany.DataEntities;
     using System;
     using System.Data.Entity;
     using System.Linq;

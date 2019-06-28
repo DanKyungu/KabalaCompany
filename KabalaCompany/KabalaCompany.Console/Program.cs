@@ -1,6 +1,6 @@
 ﻿
 using KabalaCompany.DataAccess;
-using KabalaCompany.DataEnties;
+using KabalaCompany.DataEntities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,12 +19,12 @@ namespace KabalaCompany.ConsoleTest
 
             employeeDataAccess.Add(new Employee()
             {
-                FirstName = "Alex",
-                LastName = "Maxwel",
-                PreferedName = "Alexis Max",
-                DateOfBirth = new DateTime(1992, 5, 23),
-                Email = "alex.max@kabalacompany.com",
-                HiredDate = new DateTime(2014, 8, 12)
+                FirstName = "Jean",
+                LastName = "Darsen",
+                PreferedName = "Jean Dars",
+                DateOfBirth = new DateTime(1994, 8, 9),
+                Email = "jean.dars@kabalacompany.com",
+                HiredDate = new DateTime(2018, 5, 10)
             });
 
             Console.WriteLine("Enregistrement effectué avec succès");

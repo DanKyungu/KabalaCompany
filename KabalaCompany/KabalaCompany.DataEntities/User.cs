@@ -7,7 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace KabalaCompany.DataEnties
+namespace KabalaCompany.DataEntities
 {
     [Table(nameof(User), Schema = "Application")]
     public class User

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace KabalaCompany.DataEnties
+namespace KabalaCompany.DataEntities
 {
     [Table(nameof(Employee),Schema = "HR")]
     public class Employee
