@@ -6,7 +6,7 @@ using System.Text;
 
 namespace KabalaCompany.DataEntity
 {
-    [Table(nameof(Orders), Schema = "Sales")]
+    [Table(nameof(Customers), Schema = "Sales")]
     public class Customers
     {
         [Key]
@@ -35,6 +35,7 @@ namespace KabalaCompany.DataEntity
         [MaxLength(65)]
         [Required]
         public string CustomerAddress { get; set; }
+
 
         public virtual IEnumerable<Orders> Orders { get; set; }
     }
