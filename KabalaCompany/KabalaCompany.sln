@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.Desktop", "Ka
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabalaCompany.DataAccess", "KabalaCompany.DataAccess\KabalaCompany.DataAccess.csproj", "{1F1DE969-9692-4ABC-9089-1AC621F71A89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.DataEntity", "KabalaCompany.DataEntity\KabalaCompany.DataEntity.csproj", "{590BF2D3-CFED-4540-96E9-DDEC44093F05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabalaCompany.DataEntity", "KabalaCompany.DataEntity\KabalaCompany.DataEntity.csproj", "{590BF2D3-CFED-4540-96E9-DDEC44093F05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

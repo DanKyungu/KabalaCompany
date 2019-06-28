@@ -36,7 +36,6 @@ namespace KabalaCompany.DataEntity
         [Required]
         public string CustomerAddress { get; set; }
 
-
-        public virtual IEnumerable<Orders> Orders { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }

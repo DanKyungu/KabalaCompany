@@ -23,23 +23,23 @@ namespace KabalaCompany.DataEntity
         [MaxLength(60)]
         public string Password { get; set; }
 
-        public virtual IEnumerable<Employee> Employees { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
 
-        public virtual IEnumerable<AnimalStock> AnimalStocks { get; set; }
+        public virtual ICollection<AnimalStock> AnimalStocks { get; set; }
 
         [InverseProperty("LastEditedBy")]
-        public virtual IEnumerable<Orders> Orders { get; set; }
+        public virtual ICollection<Orders> Orders { get; set; }
 
         [InverseProperty("User")]
-        public virtual IEnumerable<PurchaseOrders> UserPurchaseOrders { get; set; }
+        public virtual ICollection<PurchaseOrders> UserPurchaseOrders { get; set; }
 
         [InverseProperty("LastEditedBy")]
-        public virtual IEnumerable<PurchaseOrders> EditedPurchaseOrders { get; set; }
+        public virtual ICollection<PurchaseOrders> EditedPurchaseOrders { get; set; }
 
         [InverseProperty("LastEditedBy")]
-        public virtual IEnumerable<PurchaseOrderLines> CreatedPurchaseOrderLines { get; set; }
+        public virtual ICollection<PurchaseOrderLines> CreatedPurchaseOrderLines { get; set; }
 
         [InverseProperty("LastEditedBy")]
-        public IEnumerable<OrderLines> LastEditedOrderLines { get; set; }
+        public ICollection<OrderLines> LastEditedOrderLines { get; set; }
     }
 }

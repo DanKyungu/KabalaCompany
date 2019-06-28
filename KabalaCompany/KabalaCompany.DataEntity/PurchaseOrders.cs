@@ -43,6 +43,6 @@ namespace KabalaCompany.DataEntity
         public int LastEditedById { get; set; }
         public User LastEditedBy { get; set; }
 
-        public IEnumerable<PurchaseOrderLines> PurchaseOrderLines { get; set; }
+        public ICollection<PurchaseOrderLines> PurchaseOrderLines { get; set; }
     }
 }

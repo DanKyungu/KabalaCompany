@@ -1,58 +1,56 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
 using System;
+using System.Data.Entity;
 
 namespace KabalaCompany.DataEntity
 {
     public class KabalaCompanyContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-LR9GDC4\\DSSQLEXPRESS;Database=KabalaCompanyDb;Trusted_Connection=True;");
-        }
+        
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Orders>()
-                        .HasOne(r => r.LastEditedBy)
+                        .HasRequired(r => r.LastEditedBy)
                         .WithMany(r => r.Orders)
                         .HasForeignKey(r => r.LastEditedById)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Orders>()
-                        .HasOne(r => r.Customer)
+                        .HasRequired(r => r.Customer)
                         .WithMany(r => r.Orders)
                         .HasForeignKey(r => r.CustomerId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PurchaseOrderLines>()
-                        .HasOne(r => r.PurchaseOrder)
+                        .HasRequired(r => r.PurchaseOrder)
                         .WithMany(r => r.PurchaseOrderLines)
                         .HasForeignKey(r => r.PurchaseOrderId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<PurchaseOrders>()
-                        .HasOne(r => r.User)
+                        .HasRequired(r => r.User)
                         .WithMany(r => r.UserPurchaseOrders)
                         .HasForeignKey(r => r.UserId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<OrderLines>()
-                        .HasOne(r => r.Order)
+                        .HasRequired(r => r.Order)
                         .WithMany(r => r.OrderLines)
                         .HasForeignKey(r => r.OrderId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Supplier>()
-                        .HasOne(r => r.PrimaryContactPerson)
+                        .HasRequired(r => r.PrimaryContactPerson)
                         .WithMany(r => r.PrimarySuppliers)
                         .HasForeignKey(r => r.PrimaryContactPersonId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Supplier>()
-                        .HasOne(r => r.AlternativeContactPerson)
+                        .HasRequired(r => r.AlternativeContactPerson)
                         .WithMany(r => r.AlternativeSuppliers)
                         .HasForeignKey(r => r.AlternativeContactPersonId)
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .WillCascadeOnDelete(false);
         }
 
         public virtual DbSet<Animal> Animal { get; set; }

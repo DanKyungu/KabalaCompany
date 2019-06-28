@@ -34,7 +34,7 @@ namespace KabalaCompany.DataEntity
         public int AlternativeContactPersonId { get; set; }
         public SupplierContactPerson AlternativeContactPerson { get; set; }
 
-        public IEnumerable<PurchaseOrders> PurchaseOrders { get; set; }
-        public IEnumerable<AnimalSupplier> AnimalSuppliers { get; set; }
+        public ICollection<PurchaseOrders> PurchaseOrders { get; set; }
+        public ICollection<AnimalSupplier> AnimalSuppliers { get; set; }
     }
 }

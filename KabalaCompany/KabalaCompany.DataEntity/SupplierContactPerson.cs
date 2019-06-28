@@ -25,9 +25,9 @@ namespace KabalaCompany.DataEntity
         [Required]
         public string EmailAddress { get; set; }
 
-        public virtual IEnumerable<Supplier> PrimarySuppliers { get; set; }
+        public virtual ICollection<Supplier> PrimarySuppliers { get; set; }
 
-        public virtual IEnumerable<Supplier> AlternativeSuppliers { get; set; }
+        public virtual ICollection<Supplier> AlternativeSuppliers { get; set; }
 
     }
 }

@@ -35,6 +35,6 @@ namespace KabalaCompany.DataEntity
         public int CustomerId { get; set; }
         public Customers Customer { get; set; }
 
-        public virtual IEnumerable<OrderLines> OrderLines { get; set; }
+        public virtual ICollection<OrderLines> OrderLines { get; set; }
     }
 }

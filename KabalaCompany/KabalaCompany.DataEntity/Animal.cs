@@ -32,10 +32,10 @@ namespace KabalaCompany.DataEntity
         [Required]
         public double RetailPricePerKg { get; set; }
 
-        public virtual IEnumerable<AnimalStock> AnimalStocks { get; set; }
-        public virtual IEnumerable<OrderLines> OrderLines { get; set; }
+        public virtual ICollection<AnimalStock> AnimalStocks { get; set; }
+        public virtual ICollection<OrderLines> OrderLines { get; set; }
 
-        public virtual IEnumerable<PurchaseOrderLines> PurchaseOrderLines { get; set; }
-        public virtual IEnumerable<AnimalSupplier> AnimalSuppliers { get; set; }
+        public virtual ICollection<PurchaseOrderLines> PurchaseOrderLines { get; set; }
+        public virtual ICollection<AnimalSupplier> AnimalSuppliers { get; set; }
     }
 }
