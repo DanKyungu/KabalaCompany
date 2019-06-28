@@ -34,7 +34,8 @@ namespace KabalaCompany.DataEntity
 
         public virtual IEnumerable<AnimalStock> AnimalStocks { get; set; }
         public virtual IEnumerable<OrderLines> OrderLines { get; set; }
-        public IEnumerable<PurchaseOrderLines> PurchaseOrderLines { get; set; }
-        public IEnumerable<AnimalSupplier> AnimalSuppliers { get; set; }
+
+        public virtual IEnumerable<PurchaseOrderLines> PurchaseOrderLines { get; set; }
+        public virtual IEnumerable<AnimalSupplier> AnimalSuppliers { get; set; }
     }
 }
