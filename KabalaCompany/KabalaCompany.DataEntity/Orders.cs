@@ -6,7 +6,7 @@ using System.Text;
 
 namespace KabalaCompany.DataEntity
 {
-    [Table(nameof(Orders), Schema = "Sells")]
+    [Table(nameof(Orders), Schema = "Sales")]
     public class Orders
     {
         [Key]

@@ -5,16 +5,6 @@ namespace KabalaCompany.DataEntity
 {
     public class KabalaCompanyDbContext : DbContext
     {
-        public KabalaCompanyDbContext()
-        {
-
-        }
-
-        public KabalaCompanyDbContext(DbContextOptions<KabalaCompanyDbContext> options)
-            : base(options)
-        {
-        }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=DESKTOP-LR9GDC4\\DSSQLEXPRESS;Database=KabalaCompanyDb;Trusted_Connection=True;");
@@ -23,10 +13,10 @@ namespace KabalaCompany.DataEntity
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Orders>()
-                           .HasOne(r => r.LastEditedBy)
-                           .WithMany(r => r.Orders)
-                           .HasForeignKey(r => r.LastEditedById)
-                           .OnDelete(DeleteBehavior.Restrict);
+                        .HasOne(r => r.LastEditedBy)
+                        .WithMany(r => r.Orders)
+                        .HasForeignKey(r => r.LastEditedById)
+                        .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<PurchaseOrderLines>()
                         .HasOne(r => r.PurchaseOrder)
@@ -56,7 +46,7 @@ namespace KabalaCompany.DataEntity
                         .HasOne(r => r.AlternativeContactPerson)
                         .WithMany(r => r.AlternativeSuppliers)
                         .HasForeignKey(r => r.AlternativeContactPersonId)
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .OnDelete(DeleteBehavior.Restrict);
         }
 
         public virtual DbSet<Animal> Animal { get; set; }

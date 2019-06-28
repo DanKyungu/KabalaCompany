@@ -40,6 +40,6 @@ namespace KabalaCompany.DataEntity
         public virtual IEnumerable<PurchaseOrderLines> CreatedPurchaseOrderLines { get; set; }
 
         [InverseProperty("LastEditedBy")]
-        public List<OrderLines> LastEditedOrderLines { get; set; }
+        public IEnumerable<OrderLines> LastEditedOrderLines { get; set; }
     }
 }
