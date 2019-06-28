@@ -3,7 +3,7 @@ using System;
 
 namespace KabalaCompany.DataEntity
 {
-    public class KabalaCompanyDbContext : DbContext
+    public class KabalaCompanyContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -16,6 +16,12 @@ namespace KabalaCompany.DataEntity
                         .HasOne(r => r.LastEditedBy)
                         .WithMany(r => r.Orders)
                         .HasForeignKey(r => r.LastEditedById)
+                        .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Orders>()
+                        .HasOne(r => r.Customer)
+                        .WithMany(r => r.Orders)
+                        .HasForeignKey(r => r.CustomerId)
                         .OnDelete(DeleteBehavior.Restrict);
 
             modelBuilder.Entity<PurchaseOrderLines>()
