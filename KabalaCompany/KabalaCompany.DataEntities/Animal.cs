@@ -16,19 +16,16 @@ namespace KabalaCompany.DataEnties
         [Required]
         public string AnimalName { get; set; }
 
-        [MaxLength(60)]
+        
         [Required]
         public int MinimumWeight { get; set; }
 
-        [MaxLength(60)]
         [Required]
         public int MaximumWeight { get; set; }
 
-        [MaxLength(60)]
         [Required]
         public double PricePerKg { get; set; }
 
-        [MaxLength(60)]
         [Required]
         public double RetailPricePerKg { get; set; }
 

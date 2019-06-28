@@ -11,7 +11,7 @@ namespace KabalaCompany.DataEntities
         public KabalaComapanyDb()
             : base("name=DefaultConnectionString")
         {
-            Database.SetInitializer<KabalaComapanyDb>(new CreateDatabaseIfNotExists<KabalaComapanyDb>());
+            //Database.SetInitializer<KabalaComapanyDb>(new CreateDatabaseIfNotExists<KabalaComapanyDb>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
