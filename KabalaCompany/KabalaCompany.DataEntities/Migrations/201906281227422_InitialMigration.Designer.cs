@@ -13,7 +13,7 @@ namespace KabalaCompany.DataEntities.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201906281128431_InitialMigration"; }
+            get { return "201906281227422_InitialMigration"; }
         }
         
         string IMigrationMetadata.Source

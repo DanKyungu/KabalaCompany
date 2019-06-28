@@ -5,10 +5,10 @@ namespace KabalaCompany.DataEntities
     using System.Data.Entity;
     using System.Linq;
 
-    public class KabalaComapanyDb : DbContext
+    public class KabalaComapany : DbContext
     {
         
-        public KabalaComapanyDb()
+        public KabalaComapany()
             : base("name=DefaultConnectionString")
         {
             //Database.SetInitializer<KabalaComapanyDb>(new CreateDatabaseIfNotExists<KabalaComapanyDb>());
@@ -20,6 +20,12 @@ namespace KabalaCompany.DataEntities
                         .HasRequired(r => r.LastEditedBy)
                         .WithMany(r => r.Orders)
                         .HasForeignKey(r => r.LastEditedById)
+                        .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<User>()
+                        .HasRequired(r => r.Employee)
+                        .WithMany(r => r.User)
+                        .HasForeignKey(r => r.EmployeeId)
                         .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<Orders>()

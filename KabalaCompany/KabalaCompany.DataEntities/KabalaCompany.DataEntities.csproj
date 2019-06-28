@@ -55,10 +55,10 @@
     <Compile Include="AnimalSupplier.cs" />
     <Compile Include="Customers.cs" />
     <Compile Include="Employee.cs" />
-    <Compile Include="KabalaComapanyDb.cs" />
-    <Compile Include="Migrations\201906281128431_InitialMigration.cs" />
-    <Compile Include="Migrations\201906281128431_InitialMigration.Designer.cs">
-      <DependentUpon>201906281128431_InitialMigration.cs</DependentUpon>
+    <Compile Include="KabalaComapany.cs" />
+    <Compile Include="Migrations\201906281227422_InitialMigration.cs" />
+    <Compile Include="Migrations\201906281227422_InitialMigration.Designer.cs">
+      <DependentUpon>201906281227422_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="OrderLines.cs" />
@@ -75,8 +75,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906281128431_InitialMigration.resx">
-      <DependentUpon>201906281128431_InitialMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906281227422_InitialMigration.resx">
+      <DependentUpon>201906281227422_InitialMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

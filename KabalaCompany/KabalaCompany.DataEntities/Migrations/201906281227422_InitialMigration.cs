@@ -43,8 +43,11 @@ namespace KabalaCompany.DataEntities.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         Username = c.String(nullable: false, maxLength: 20),
                         Password = c.String(nullable: false, maxLength: 60),
+                        EmployeeId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("HR.Employee", t => t.EmployeeId)
+                .Index(t => t.EmployeeId);
             
             CreateTable(
                 "Sales.PurchaseOrderLines",
@@ -206,18 +209,15 @@ namespace KabalaCompany.DataEntities.Migrations
                         Email = c.String(nullable: false, maxLength: 35),
                         HiredDate = c.DateTime(nullable: false),
                         TerminationDate = c.DateTime(nullable: false),
-                        UserId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("Application.User", t => t.UserId, cascadeDelete: true)
-                .Index(t => t.UserId);
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
             DropForeignKey("Sales.OrderLines", "LastEditedById", "Application.User");
-            DropForeignKey("HR.Employee", "UserId", "Application.User");
+            DropForeignKey("Application.User", "EmployeeId", "HR.Employee");
             DropForeignKey("Purchasing.PurchaseOrders", "LastEditedById", "Application.User");
             DropForeignKey("Sales.PurchaseOrderLines", "LastEditedById", "Application.User");
             DropForeignKey("Sales.PurchaseOrderLines", "PurchaseOrderId", "Purchasing.PurchaseOrders");
@@ -236,7 +236,6 @@ namespace KabalaCompany.DataEntities.Migrations
             DropForeignKey("Sales.PurchaseOrderLines", "AnimalId", "Warehouse.Animal");
             DropForeignKey("Warehouse.AnimalStock", "LastEditedById", "Application.User");
             DropForeignKey("Warehouse.AnimalStock", "AnimalId", "Warehouse.Animal");
-            DropIndex("HR.Employee", new[] { "UserId" });
             DropIndex("Sales.AnimalSupplier", new[] { "SupplierId" });
             DropIndex("Sales.AnimalSupplier", new[] { "AnimalId" });
             DropIndex("Supplier.Supplier", new[] { "AlternativeContactPersonId" });
@@ -254,6 +253,7 @@ namespace KabalaCompany.DataEntities.Migrations
             DropIndex("Sales.PurchaseOrderLines", new[] { "LastEditedById" });
             DropIndex("Sales.PurchaseOrderLines", new[] { "AnimalId" });
             DropIndex("Sales.PurchaseOrderLines", new[] { "PurchaseOrderId" });
+            DropIndex("Application.User", new[] { "EmployeeId" });
             DropIndex("Warehouse.AnimalStock", new[] { "LastEditedById" });
             DropIndex("Warehouse.AnimalStock", new[] { "AnimalId" });
             DropTable("HR.Employee");

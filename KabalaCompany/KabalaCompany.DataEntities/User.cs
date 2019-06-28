@@ -23,7 +23,8 @@ namespace KabalaCompany.DataEnties
         [MaxLength(60)]
         public string Password { get; set; }
 
-        public virtual ICollection<Employee> Employees { get; set; }
+        public int EmployeeId { get; set; }
+        public Employee Employee { get; set; }
 
         public virtual ICollection<AnimalStock> AnimalStocks { get; set; }
 

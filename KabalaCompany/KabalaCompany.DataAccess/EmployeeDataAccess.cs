@@ -7,11 +7,11 @@ namespace KabalaCompany.DataAccess
 {
     public class EmployeeDataAccess
     {
-        private KabalaComapanyDb KabalaCompanyContext;
+        private KabalaComapany KabalaCompanyContext;
 
         public EmployeeDataAccess()
         {
-            KabalaCompanyContext = new KabalaComapanyDb();
+            KabalaCompanyContext = new KabalaComapany();
         }
 
         public void Add(Employee employee)
@@ -36,7 +36,10 @@ namespace KabalaCompany.DataAccess
         {
             using (KabalaCompanyContext)
             {
-                //KabalaCompanyContext.Employee.U(employee);
+                var currentEmployee = KabalaCompanyContext.Employee
+                    .FirstOrDefault(x => x.Id == employee.Id);
+
+                currentEmployee = employee;
                 KabalaCompanyContext.SaveChanges();
             }
         }
