@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.Desktop", "Ka
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabalaCompany.DataAccess", "KabalaCompany.DataAccess\KabalaCompany.DataAccess.csproj", "{1F1DE969-9692-4ABC-9089-1AC621F71A89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabalaCompany.DataEntity", "KabalaCompany.DataEntity\KabalaCompany.DataEntity.csproj", "{590BF2D3-CFED-4540-96E9-DDEC44093F05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KabalaCompany.DataEntities", "KabalaCompany.DataEntities\KabalaCompany.DataEntities.csproj", "{4AC12845-C719-4F3D-A1B6-02AE1D478B69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F1DE969-9692-4ABC-9089-1AC621F71A89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{590BF2D3-CFED-4540-96E9-DDEC44093F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AC12845-C719-4F3D-A1B6-02AE1D478B69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AC12845-C719-4F3D-A1B6-02AE1D478B69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AC12845-C719-4F3D-A1B6-02AE1D478B69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AC12845-C719-4F3D-A1B6-02AE1D478B69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

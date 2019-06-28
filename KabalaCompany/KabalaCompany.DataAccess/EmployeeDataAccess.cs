@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Linq;
-using KabalaCompany.DataEntity;
+using KabalaCompany.DataEnties;
+using KabalaCompany.DataEntities;
 
 namespace KabalaCompany.DataAccess
 {
     public class EmployeeDataAccess
     {
-        private KabalaCompanyContext KabalaCompanyContext;
+        private KabalaComapanyDb KabalaCompanyContext;
 
         public EmployeeDataAccess()
         {
-            KabalaCompanyContext = new KabalaCompanyContext();
+            KabalaCompanyContext = new KabalaComapanyDb();
         }
 
         public void Add(Employee employee)
@@ -35,7 +36,7 @@ namespace KabalaCompany.DataAccess
         {
             using (KabalaCompanyContext)
             {
-                KabalaCompanyContext.Employee.Update(employee);
+                //KabalaCompanyContext.Employee.U(employee);
                 KabalaCompanyContext.SaveChanges();
             }
         }

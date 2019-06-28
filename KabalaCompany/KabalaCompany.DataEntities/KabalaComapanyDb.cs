@@ -1,15 +1,19 @@
-﻿
-using System;
-using System.Data.Entity;
-
-namespace KabalaCompany.DataEntity
+namespace KabalaCompany.DataEntities
 {
-    public class KabalaCompanyContext : DbContext
-    {
-        public KabalaCompanyContext():base("DefaultConnectionString")
-        {
+    using KabalaCompany.DataEnties;
+    using System;
+    using System.Data.Entity;
+    using System.Linq;
 
+    public class KabalaComapanyDb : DbContext
+    {
+        
+        public KabalaComapanyDb()
+            : base("name=DefaultConnectionString")
+        {
+            Database.SetInitializer<KabalaComapanyDb>(new CreateDatabaseIfNotExists<KabalaComapanyDb>());
         }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Orders>()
@@ -59,13 +63,15 @@ namespace KabalaCompany.DataEntity
         public virtual DbSet<Animal> AnimalStock { get; set; }
         public virtual DbSet<AnimalSupplier> AnimalSupplier { get; set; }
         public virtual DbSet<Customers> Customers { get; set; }
-        public virtual DbSet<Employee> Employee {get; set;}
-        public virtual DbSet<OrderLines> OrderLines {get; set; }
-        public virtual DbSet<Orders> Order {get; set; }
+        public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<OrderLines> OrderLines { get; set; }
+        public virtual DbSet<Orders> Order { get; set; }
         public virtual DbSet<PurchaseOrderLines> PurchaseOrderLines { get; set; }
         public virtual DbSet<PurchaseOrders> PurchaseOrder { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<SupplierContactPerson> SupplierContactPerson { get; set; }
         public virtual DbSet<User> User { get; set; }
+
     }
+
 }
