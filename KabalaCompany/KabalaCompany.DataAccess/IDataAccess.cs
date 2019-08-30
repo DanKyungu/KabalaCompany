@@ -14,6 +14,6 @@ namespace KabalaCompany.DataAccess
 
         bool Update(int id,T entity);
 
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAll();
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace KabalaCompany.DataAccess
 {
@@ -50,9 +51,9 @@ namespace KabalaCompany.DataAccess
             }
         }
 
-        public IEnumerable<T> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            var entities = (IEnumerable<T>)DbContext.Set(entity.GetType());
+            var entities = (IEnumerable<T>) await DbContext.Set(entity.GetType()).ToListAsync();
             return entities;
         }
     }
