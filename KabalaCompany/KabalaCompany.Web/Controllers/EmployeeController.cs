@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KabalaCompany.DataAccess;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,20 @@ namespace KabalaCompany.Web.Controllers
 {
     public class EmployeeController : Controller
     {
+        EmployeeDataAccess employeeDataAccess;
+
+        public EmployeeController()
+        {
+            employeeDataAccess = new EmployeeDataAccess();
+        }
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult GetEmployees()
+        {
+            
         }
     }
 }
