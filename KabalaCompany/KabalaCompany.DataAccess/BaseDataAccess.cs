@@ -10,6 +10,7 @@ namespace KabalaCompany.DataAccess
 {
     public class BaseDataAccess<T> : IDataAccess<T> where T : new()
     {
+        private T entity;
         protected KabalaComapany DbContext { get; }
 
         public BaseDataAccess()
@@ -47,6 +48,12 @@ namespace KabalaCompany.DataAccess
 
                 return true;
             }
+        }
+
+        public IEnumerable<T> GetAll()
+        {
+            var entities = (IEnumerable<T>)DbContext.Set(entity.GetType());
+            return entities;
         }
     }
 
