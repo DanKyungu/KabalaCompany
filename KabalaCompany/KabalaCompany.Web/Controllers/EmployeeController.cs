@@ -22,7 +22,8 @@ namespace KabalaCompany.Web.Controllers
 
         public ActionResult GetEmployees()
         {
-            
+            var employees = employeeDataAccess.GetAll();
+            return Json(employees, JsonRequestBehavior.AllowGet);
         }
     }
 }
