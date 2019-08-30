@@ -17,15 +17,16 @@ namespace KabalaCompany.ConsoleTest
 
             EmployeeDataAccess employeeDataAccess = new EmployeeDataAccess();
 
-            //employeeDataAccess.Add(new Employee()
-            //{
-            //    FirstName = "Jean",
-            //    LastName = "Darsen",
-            //    PreferedName = "Jean Dars",
-            //    DateOfBirth = new DateTime(1994, 8, 9),
-            //    Email = "jean.dars@kabalacompany.com",
-            //    HiredDate = new DateTime(2018, 5, 10)
-            //});
+            employeeDataAccess.Add(new Employee()
+            {
+                FirstName = "Jean",
+                LastName = "Darsen",
+                PreferedName = "Jean Dars",
+                DateOfBirth = new DateTime(1994, 8, 9),
+                Email = "jean.dars@kabalacompany.com",
+                HiredDate = new DateTime(2018, 5, 10)
+            });
+
 
             employeeDataAccess.Update(1, new Employee() { FirstName = "Henock" });
 

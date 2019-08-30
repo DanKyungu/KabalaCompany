@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using KabalaCompany.DataEntities;
-using KabalaCompany.DataEntities;
 using System.Reflection;
 
 namespace KabalaCompany.DataAccess

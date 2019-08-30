@@ -21,7 +21,7 @@ namespace KabalaCompany.Web.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("DefaultConnectionString", throwIfV1Schema: false)
         {
         }
 

@@ -13,5 +13,7 @@ namespace KabalaCompany.DataAccess
         void Delete(T entity);
 
         bool Update(int id,T entity);
+
+
     }
 }
